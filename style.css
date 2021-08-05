@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  
+  html {
+    font-size: 24px;
+    font-family: 'Unica One', cursive;
+    /* font-family: 'Courier New', Courier, monospace; */
+  }
+  
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0;
+    
+    /* border: 2px solid blue; */
+  }
+  
+  #app h1 {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 8px;
+  }
+
+
+  .calculator{
+    
+    background-color: rgb(196, 7, 16);
+    border: 10px solid black;
+    display: grid;
+    grid-template-rows: 180px 1fr;
+    width: 450px;
+    height: 700px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .display{
+    border: 5px solid black;
+    margin: 10px;
+    background-color: rgb(165, 162, 162);
+    display: grid;
+    grid-template-rows: 70px repeat(2, 50px) ;
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+
+  h1, .held-label, .calculator button{
+
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+
+    }
+
+  .controls{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px;
+  }
+
+  .held-label{
+    grid-row: 1;
+    grid-column: 1 / 5;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+
+  }
+
+  .memory{
+    grid-row: 1;
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 8px;
+  }
+
+
+
+.operations{
+  grid-row: 1 / 6;
+  grid-column: 4;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 8px;
+}
+
+.digits{
+  grid-row: 2 / 6;
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+}
+
+.decimal{
+  grid-row: 4;
+  grid-column: 3;
+
+}
+
+.digits :last-of-type{
+  grid-column: 1 / 3;
+}
+
+.calculator button{
+  font-weight: bold;
+  font-size: 2em;
+  border-radius: 8px;
+  border: 5px solid black;
+}
+
+.memory button{
+  
+  font-size: 1em;
+ 
+  background-color: orange;
+  border-radius: 8px;
+  
+  font-weight: bold;
+}
+
+.held-value{
+
+  justify-self: end;
+}
+
+.next-operation{
+  justify-self: center;
+
+}
+
+
+
+.held-value, .next-operation, .next-value{
+  font-size: 1.5em;
+}
